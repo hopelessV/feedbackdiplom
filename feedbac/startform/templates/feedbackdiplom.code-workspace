@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "feedbackdiplom",
+			"path": "../../.."
+		},
+		{
+			"name": "static",
+			"path": "../../../../diplomProject/diplom/static"
+		}
+	],
+	"settings": {}
+}
