@@ -1,4 +1,66 @@
-
 *{
-    background: rgb(16, 102, 136);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-emphasis: none;
+    box-sizing: border-box; 
+    font-family:'Times New Roman', Times, serif;
+}
+
+.Title h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: rgb(256, 255, 234);
+}
+
+.list_menu a{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(256, 255, 234);
+    border-left: 2px solid rgb(256, 255, 234);
+    padding-left: 5px;
+    transition: all 0.2s ease;
+    
+}
+
+.list_menu a:hover{
+    border-left: 2px solid rgb(256, 255, 234);
+    padding-left: 10px;
+    transition: all 0.2s ease; 
+}
+
+.list_menu li{
+    margin: 20px 0;
+    list-style-type: none;
+}
+
+.list_menu{
+    margin-bottom: 50px;
+}
+
+.Menu{
+    padding: 25vh 50px;
+    position: fixed;
+    background: rgb(20, 20, 20, 0.5);
+    height: 100vh;
+    backdrop-filter: blur(16px);
+    border-right: 7px solid rgb(256, 255, 234);
+    left: -557px;
+    transition: all 1s ease;
+    border-radius: 0 20px 20px 0;
+}
+
+.Menu:hover{
+    left: 0;
+    transition: all 1s ease;
+    background: rgb(20, 20, 20, 0.5);
+}
+
+.Fon{
+    background: rgb(185, 148, 0);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
