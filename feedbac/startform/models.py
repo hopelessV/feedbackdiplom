@@ -15,3 +15,7 @@ class asd(models.Model):
     class Meta:
         verbose_name = 'Vacancy'
         verbose_name_plural = 'Vacancys'
+
+class test(models.Model):
+    test_name = models.CharField(max_length=250)
+    test_log = models.CharField(max_length=250)

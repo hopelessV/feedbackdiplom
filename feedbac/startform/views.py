@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from feedbac.forms import feedback
-from .models import asd
+from .forms import feedback, test_feedback
+from .models import asd, test
 from django.shortcuts import get_object_or_404, render, redirect
 
 def main_form(request):
@@ -8,13 +8,14 @@ def main_form(request):
 
 def new_appeal(request):
     template = 'feedback.html'
-    appeal = get_object_or_404(asd)
+    appeal = asd
     # if post.author != request.user:
     #     return redirect('posts:profile', username=post.author)
-    form = feedback(request.POST or None, instance=appeal)
+    form = feedback(request.POST or None)
     context = {
         'appeal': appeal,
         'form': form,
     }
-    form.save()
+    if form.is_valid():
+        form.save()
     return render(request, template, context)
