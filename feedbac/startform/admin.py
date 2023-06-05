@@ -1,6 +1,4 @@
 from django.contrib import admin
-from .models import asd, test
+from .models import asd
 
 admin.site.register(asd)
-
-admin.site.register(test)

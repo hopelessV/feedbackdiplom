@@ -1,54 +1,4 @@
-.bootstrap-select {
-    width: 220px \0;
-    vertical-align: middle
-}
-
-.bootstrap-select>.dropdown-toggle {
-    position: relative;
-    width: 100%;
-    text-align: right;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between
-}
-
-.bootstrap-select>.dropdown-toggle:after {
-    margin-top: -1px
-}
-
-.bootstrap-select>.dropdown-toggle.bs-placeholder,.bootstrap-select>.dropdown-toggle.bs-placeholder:active,.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
-    color: #999
-}
-
-.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger:hover,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-dark,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-dark:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-dark:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-dark:hover,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-info,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-info:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-info:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-info:hover,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary:hover,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-secondary,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-secondary:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-secondary:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-secondary:hover,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-success,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-success:active,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-success:focus,.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-success:hover {
-    color: hsla(0,0%,100%,.5)
-}
-
-.bootstrap-select>select {
-    position: absolute!important;
-    bottom: 0;
-    left: 50%;
-    display: block!important;
-    width: .5px!important;
-    height: 100%!important;
-    padding: 0!important;
-    opacity: 0!important;
-    border: none;
-    z-index: 0!important
-}
-
-.bootstrap-select .dropdown-menu.inner {
-    position: static;
-    float: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none
-}
-
-html {
+/* html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
 }
@@ -56,7 +6,7 @@ html {
 body {
     margin: 0;
     background: #101219
-}
+} */
 
 details,main {
     display: block
@@ -222,11 +172,11 @@ h1,h2,h3,h4,h5,h6 {
     word-break: break-all
 }
 
-.ticket-ublock {
+/* .ticket-ublock {
     border: 1px solid #d5a03a;
     padding: 38px;
     background: #101219
-}
+} */
 
 .ticket-cblock,.ticket-ublock {
     margin-top: 15px;
@@ -259,9 +209,9 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none
 }
 
-.ticket-pagination span {
+/* .ticket-pagination span {
     color: #ffd237
-}
+} */
 
 .ticket-comment__item {
     margin-top: 15px;
@@ -273,7 +223,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 12px
 }
 
-.ticket-comment__control {
+/* .ticket-comment__control {
     margin-top: 12px;
     height: 40px;
     border: 1px solid;
@@ -282,7 +232,7 @@ h1,h2,h3,h4,h5,h6 {
     background: #1f2028;
     padding-left: 16px;
     color: #fff
-}
+} */
 
 .ticket-comment__form {
     justify-content: center
@@ -386,27 +336,6 @@ div.support-ticket-push__container {
     color: #f0c636!important;
     outline: none!important;
     border-radius: initial
-}
-
-.support-select_control .dropdown-menu {
-    background: #1f2028
-}
-
-.support-select_control .dropdown-item {
-    color: #f0c636
-}
-
-.support-select_control.show .support-select_control .dropdown-item {
-    color: #f0c636!important
-}
-
-.support-select_control .dropdown-item:hover {
-    background: #353641!important;
-    color: #fff!important
-}
-
-.support-select_control .dropdown-item.active {
-    background: #464852!important
 }
 
 .support-ticket__submit {

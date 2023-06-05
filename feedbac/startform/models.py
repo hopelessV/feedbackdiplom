@@ -7,15 +7,11 @@ class asd(models.Model):
     surrname = models.CharField(max_length=250)
     number = models.IntegerField()
     emails = models.EmailField()
-    pasport_number = models.IntegerField()
-    pasport_series = models.IntegerField()
-    url_linc = models.URLField()
+    date_ofbirth = models.CharField(max_length=50)
+    residential_address = models.CharField(max_length=250)
+    criminal_record = models.CharField(max_length=250)
     description = models.CharField(max_length=250)
 
     class Meta:
         verbose_name = 'Vacancy'
         verbose_name_plural = 'Vacancys'
-
-class test(models.Model):
-    test_name = models.CharField(max_length=250)
-    test_log = models.CharField(max_length=250)
