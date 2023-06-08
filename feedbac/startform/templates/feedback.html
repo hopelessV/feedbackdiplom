@@ -18,7 +18,7 @@
                                 {% csrf_token %}
                                 <div class="col">
                                     {% for field in form %}
-                                        <div for="support_ticket_form_email" class="support-ticket-label control-label">
+                                        <div for="support_ticket_form_email" class="support-ticket-label control-label app-title">
                                             {{ field.label }}
                                         </div>
                                         <div class="support-ticket-control">{{ field }}</div>

@@ -1,12 +1,12 @@
-/* html {
+html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
 }
 
 body {
     margin: 0;
-    background: #101219
-} */
+    background: #243462
+}
 
 details,main {
     display: block
@@ -172,11 +172,11 @@ h1,h2,h3,h4,h5,h6 {
     word-break: break-all
 }
 
-/* .ticket-ublock {
+.ticket-ublock {
     border: 1px solid #d5a03a;
     padding: 38px;
     background: #101219
-} */
+}
 
 .ticket-cblock,.ticket-ublock {
     margin-top: 15px;
@@ -209,9 +209,9 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none
 }
 
-/* .ticket-pagination span {
+.ticket-pagination span {
     color: #ffd237
-} */
+}
 
 .ticket-comment__item {
     margin-top: 15px;
@@ -223,7 +223,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 12px
 }
 
-/* .ticket-comment__control {
+.ticket-comment__control {
     margin-top: 12px;
     height: 40px;
     border: 1px solid;
@@ -232,7 +232,7 @@ h1,h2,h3,h4,h5,h6 {
     background: #1f2028;
     padding-left: 16px;
     color: #fff
-} */
+}
 
 .ticket-comment__form {
     justify-content: center
@@ -263,7 +263,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .support-auth__block,.support-ticket__form {
-    background: #101219;
+    background: #a4aed4;
     font-family: Geometria,sans-serif
     
 }
@@ -296,15 +296,15 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 16px;
     margin-bottom: 12px;
     font-weight: 800;
-    color: #fff
+    color: #000000
 }
 
 .support-ticket-control {
     height: 40px;
     border: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(0deg,#d5a03a,#ffd237);
-    background: #1f2028;
+    border-image-source: linear-gradient(0deg,#000000,#000000);
+    background: #a4aed4;
     padding-left: 16px;
     color: #fff
 }
@@ -345,7 +345,7 @@ div.support-ticket-push__container {
     transition: .3s;
     margin-top: 35px;
     border-radius: 11.5px;
-    background-image: linear-gradient(57deg,#ffc339,#fe8926,#ffc339,#fe8926);
+    background-image: linear-gradient(57deg,#39ffef,#26a8fe,#3995ff,#2660fe);
     background-size: 300%;
     font-weight: 500;
     color: #fff;

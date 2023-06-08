@@ -19,6 +19,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+
+DEFAULT_FROM_EMAIL = 'admin@ms.permkrai.ru'  # замените на свою почту
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 

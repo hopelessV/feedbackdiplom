@@ -3,6 +3,10 @@ from .forms import feedback
 from .models import asd
 from django.shortcuts import render, redirect
 
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from feedbac.settings import DEFAULT_FROM_EMAIL
+
 def main_form(request):
     return render(request, 'start_window.html')
 
@@ -16,4 +20,12 @@ def new_appeal(request):
     }
     if form.is_valid():
         form.save()
+    send_mail(
+            'Тема письма',
+            'Текст письма.',
+            DEFAULT_FROM_EMAIL,  # Это поле "От кого"
+            ['to@example.com'],  # Это поле "Кому" (можно указать список адресов)
+            fail_silently=True, # Сообщать об ошибках («молчать ли об ошибках?»)
+        )
     return render(request, template, context)
+
