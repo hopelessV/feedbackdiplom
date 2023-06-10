@@ -1,0 +1,17 @@
+{% load static %}
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/core_min.css' %}">
+        <title>Новое обращение</title>
+    </head>
+<body>
+    <header class="header">
+        {% include 'includes/header.html' %}     
+    </header>
+        {% include 'includes/content.html' %}
+    <footer class="footer">
+        {% include 'includes/footer.html' %}
+    </footer>
+</body>
+</html>

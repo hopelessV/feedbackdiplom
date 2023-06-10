@@ -11,7 +11,7 @@ def main_form(request):
     return render(request, 'start_window.html')
 
 def new_appeal(request):
-    template = 'feedback.html'
+    template = 'startform/feedback.html'
     appeal = asd
     form = feedback(request.POST or None)
     context = {
