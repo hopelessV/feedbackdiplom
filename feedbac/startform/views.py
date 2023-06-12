@@ -29,3 +29,5 @@ def new_appeal(request):
         )
     return render(request, template, context)
 
+def login_place(request):
+    return render(request, 'user/login.html')

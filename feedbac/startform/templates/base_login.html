@@ -16,9 +16,31 @@
     <header class="header">
         {% include 'includes/header.html' %}     
     </header>
-    <section>
-        {% include 'includes/section.html' %} 
-    </section>
+    <div class="card-body"> 
+        <form method="post"
+          {% if action_url %}
+            action="{% url action_url %}"
+          {% endif %}
+        >
+        {% csrf_token %}
+    
+        {% for field in form %}
+          <div>
+            <div class="support-ticket-label control-label app-title">
+              {{ field.label }}
+            </div>
+            <div>
+              {{ field }}
+            </div>
+          </div>
+        {% endfor %}
+        <div>
+          <button class="support-ticket__submit" type="submit">
+            Войти
+          </button>
+        </div>
+        </form>
+    </div>
     <footer class="footer">
         {% include 'includes/footer.html' %} 
     </footer>

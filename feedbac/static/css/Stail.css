@@ -3,10 +3,10 @@ html {
   -webkit-text-size-adjust: 100%
 }
 
-body {
+/* body {
   margin: 0;
   background: #243462
-}
+} */
 
 details,main {
   display: block
@@ -159,10 +159,10 @@ h1,h2,h3,h4,h5,h6 {
 .app-title {
   position: relative;
   z-index: 3;
-  text-align: center;
+  text-align: relative;
   font-size: 30px;
   font-weight: 600;
-  color: #fff;
+  color: #000000;
   text-transform: uppercase;
   font-family: Geometria,sans-serif
 }
@@ -345,7 +345,7 @@ div.support-ticket-push__container {
   transition: .3s;
   margin-top: 35px;
   border-radius: 11.5px;
-  background-image: linear-gradient(57deg,#39ffef,#26a8fe,#3995ff,#2660fe);
+  background-image: linear-gradient(57deg,#243462,#243462,#243462,#243462);
   background-size: 300%;
   font-weight: 500;
   color: #fff;

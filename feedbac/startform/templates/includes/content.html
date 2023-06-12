@@ -26,7 +26,7 @@
                 <h2 class="app-title support__title">Новое обращение</h2>
             </div>
             <div class="col-12">
-                <div class="support-ticket__form support-ticket-push__form">
+                <div class=" support-ticket-push__form">
                     <div class="support-ticket-group">
                         <form action="{% url 'formstart:feedback_form' %}" method="post" >
                             {% csrf_token %}
@@ -35,7 +35,9 @@
                                     <div for="support_ticket_form_email" class="support-ticket-label control-label app-title">
                                         {{ field.label }}
                                     </div>
-                                    <div class="support-ticket-control">{{ field }}</div>
+                                    <div>
+                                        {{ field }}
+                                    </div>
                                 {% endfor %}
                                 <button class="support-ticket__submit" type="submit">Отправить</button>
                             </div>

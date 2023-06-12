@@ -7,7 +7,7 @@ class feedback(forms.ModelForm):
 
     class Meta:
         model = asd # модель формы
-        fields = ('vacation', 'name', 'middlename', 'surrname', 'number', 'emails', 'date_ofbirth', 'residential_address', 'criminal_record', 'description')
+        fields = ('vacation', 'middlename', 'name', 'surrname', 'date_ofbirth', 'residential_address', 'criminal_record', 'number', 'emails', 'description')
         labels = {
             'vacation': ('Выберите вакансию'),
             'name': ('Имя'),
