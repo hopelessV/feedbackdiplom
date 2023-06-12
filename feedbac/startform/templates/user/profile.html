@@ -1,4 +1,9 @@
-{% for feed in feedback %}
-    {% for field in feed%}
-    {% endfor%}
+
+{% for obj in page_obj %}
+<ul>
+    {% for field, value in obj.fields.items %}
+        <li>{{ field }}: {{ value }}</li>
+    {% endfor %}
+    <a href="{% url 'appeal:feedback_detail' obj.pk %}">Детали</a>
+</ul>
 {% endfor %}

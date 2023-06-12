@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class asd(models.Model):
+class FeedbacksModel(models.Model):
     vacation = models.CharField(max_length=250)
     name = models.CharField(max_length=250)
     middlename = models.CharField(max_length=250)

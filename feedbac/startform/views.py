@@ -1,6 +1,7 @@
 from .forms import feedback
-from .models import asd, User
+from .models import FeedbacksModel, User
 
+from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render, redirect
 from django.core.mail import send_mail
@@ -10,19 +11,27 @@ from feedbac.settings import DEFAULT_FROM_EMAIL
 def main_form(request):
     return render(request, 'start_window.html')
 
+def feedback_detail(request, feedback_id):
+    template = 'user/detail.html'
+    detail = get_object_or_404(FeedbacksModel, pk=feedback_id)
+    context = {
+        'detail': detail,
+    }
+    return render(request, template, context)
+
 def profile(request, username):
     template = 'user/profile.html'
     manager = get_object_or_404(User, username=username)
-    feedback = asd.objects.all()
+    page_obj = serializers.serialize('python',FeedbacksModel.objects.all(), fields = ('vacation','surrname','name','date_ofbirth'))
     context = {
         'manager': manager,
-        'feedback': feedback,
+        'page_obj': page_obj,
     }
     return render(request, template, context)
 
 def new_appeal(request):
     template = 'feedback.html'
-    appeal = asd
+    appeal = FeedbacksModel
     form = feedback(request.POST or None)
     context = {
         'appeal': appeal,
