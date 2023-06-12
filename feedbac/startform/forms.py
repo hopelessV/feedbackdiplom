@@ -1,12 +1,12 @@
 from django import forms
-from .models import asd
+from .models import FeedbacksModel
 
 class feedback(forms.ModelForm):
     def __init__(self, args, **kwargs):
         super().__init__(args, **kwargs)
 
     class Meta:
-        model = asd # модель формы
+        model = FeedbacksModel # модель формы
         fields = ('vacation', 'name', 'middlename', 'surrname', 'number', 'emails', 'date_ofbirth', 'residential_address', 'criminal_record', 'description')
         labels = {
             'vacation': ('Выберите вакансию'),
