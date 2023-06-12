@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+	<a href="{% url 'appeal:profile' user.username %}">Профиль: {{ user.username }}</a>
     <header class="header">
         <div class="header__panel">
             <div class="container">

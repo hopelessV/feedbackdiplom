@@ -1,14 +1,24 @@
-from django.shortcuts import render
 from .forms import feedback
-from .models import asd
-from django.shortcuts import render, redirect
+from .models import asd, User
 
-from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, render, redirect
+from django.core.mail import send_mail
 from feedbac.settings import DEFAULT_FROM_EMAIL
+
 
 def main_form(request):
     return render(request, 'start_window.html')
+
+def profile(request, username):
+    template = 'user/profile.html'
+    manager = get_object_or_404(User, username=username)
+    feedback = asd.objects.all()
+    context = {
+        'manager': manager,
+        'feedback': feedback,
+    }
+    return render(request, template, context)
 
 def new_appeal(request):
     template = 'feedback.html'
@@ -20,12 +30,14 @@ def new_appeal(request):
     }
     if form.is_valid():
         form.save()
+        
     send_mail(
-            'Тема письма',
-            'Текст письма.',
-            DEFAULT_FROM_EMAIL,  # Это поле "От кого"
-            ['to@example.com'],  # Это поле "Кому" (можно указать список адресов)
-            fail_silently=True, # Сообщать об ошибках («молчать ли об ошибках?»)
-        )
+        'Тема письма',
+        'Текст письма.',
+        DEFAULT_FROM_EMAIL,  # Это поле "От кого"
+        # Это поле "Кому" (можно указать список адресов)
+        ['to@example.com'],
+        # Сообщать об ошибках («молчать ли об ошибках?»)
+        fail_silently=True,
+    )
     return render(request, template, context)
-
