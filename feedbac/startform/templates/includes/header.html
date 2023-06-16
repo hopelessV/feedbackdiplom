@@ -1,0 +1,182 @@
+<div class="header__panel">
+    <div class="container">
+        <div class="row header__panel-block">
+            <div class="col-auto header__panel-sites">
+                <div class="header__panel-link header__panel-icon header__panel-icon--sites">
+                    <div class="header__panel-sites-text">Каталог органов власти Пермского края</div>
+                </div>
+            </div>
+            <div class="col-auto header__logo-mobile">
+                </a>
+            </div>
+            <div class="col-auto header__panel-links">
+                <form class="header__form header__panel-link" action="/search/">
+                    <input class="header__form-input" placeholder="Поиск по сайту" name="q">
+                    <button class="header__form-btn header__panel-link header__panel-icon header__panel-icon--search" type="submit"></button>
+                </form>
+                <a class="header__panel-link header__panel-icon header__panel-icon--internet" href="https://reception.permkrai.ru/" target="_blank">Интернет-приемная</a>
+                <a class="header__panel-link header__panel-icon header__panel-icon--user" href="{% url 'appeal:profile' user.username %}">Профиль: {{ user.username }}</a>
+            </div>
+            <div class="col-auto header__menu-burger-mobile">
+                <div class="header__menu-elem header__menu-burger"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header__nav">
+    <div class="container">
+        <div class="row header__nav-submenu">
+            <div class="col-xl-4 col-sm-12 header__logo-block">
+                <a class="header__logo" href="/">
+                    <div class="header__logo-name">Агентство по делам юстиции и мировых судей Пермского края</div>
+                </a>
+            </div>
+            <div class="col-xl-8 col-sm-12 header__menu">
+                <a href="/ob-agentstve/" class="header__menu-elem active">Об Агентстве</a>
+                <a href="/struktura-ogv/" class="header__menu-elem">Структура</a>
+                <a href="/deyatelnost/" class="header__menu-elem">Деятельность</a>
+                <a href="/dokumenty/" class="header__menu-elem">Документы</a>
+                <div class="header__menu-elem header__menu-burger"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header__submenu" data-simplebar>
+    <div class="container">
+        <div class="row header__nav-submenu">
+            <div class="col-12 header__submenu-elems">
+                <div class="row">
+                    <div class="col-12 col-xl-4 header__submenu-elem">
+                        <div class="header__submenu-btn">
+                            <a class="header__submenu-title active" href="/ob-agentstve/">Об Агентстве</a>
+                        </div>
+                        <div class="header__submenu-links">
+                            <a class="header__submenu-link" href="/ob-agentstve/obshchaya-informatsiya">Общая информация</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/polnomochiya">Полномочия</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/telefonnyy-spravochnik">Телефонный справочник</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/gosudarstvennaya-sluzhba-i-kadry/">Государственная служба и кадры</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/skhema-proezda">Схема проезда</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/podvedomstvennye-organizatsii">Подведомственные организации</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/perecheni-informatsionnykh-sistem-bankov-dannykh-reestrov-registrov">Перечени информационных систем, банков данных, реестров, регистров</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/bezopasnost">Безопасность</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/proverki">Проверки</a>
+                            <a class="header__submenu-link" href="/ob-agentstve/istoricheskaya-spravka">Историческая справка</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 header__submenu-elem">
+                        <div class="header__submenu-btn">
+                            <a class="header__submenu-title" href="/deyatelnost/">Деятельность</a>
+                        </div>
+                        <div class="header__submenu-links">
+                            <a class="header__submenu-link" href="/deyatelnost/plany-i-pokazateli-deyatelnosti-agentstva/">Планы и показатели деятельности Агентства</a>
+                            <a class="header__submenu-link" href="/deyatelnost/programmy">Программы</a>
+                            <a class="header__submenu-link" href="/deyatelnost/administrirovanie-shtrafov">Администрирование штрафов</a>
+                            <a class="header__submenu-link" href="/deyatelnost/antimonopolnyy-komplaens">Антимонопольный комплаенс</a>
+                            <a class="header__submenu-link" href="/deyatelnost/ofitsialnye-vystupleniya-zayavleniya-poezdki-vizity">Официальные выступления, заявления, поездки, визиты</a>
+                            <a class="header__submenu-link" href="/deyatelnost/statistika/">Статистика</a>
+                            <a class="header__submenu-link" href="/deyatelnost/protivodeystvie-korruptsii/">Противодействие коррупции</a>
+                            <a class="header__submenu-link" href="/deyatelnost/obrashcheniya-grazhdan/">Обращения граждан</a>
+                            <a class="header__submenu-link" href="/deyatelnost/uslugi-v-elektronnom-vide">Услуги в электронном виде</a>
+                            <a class="header__submenu-link" href="/deyatelnost/sudebnye-uchastki">Судебные участки</a>
+                            <a class="header__submenu-link" href="/deyatelnost/sudebnaya-praktika/">Судебная практика</a>
+                            <a class="header__submenu-link" href="/deyatelnost/v-pomoshch-mirovomu-sude">В помощь мировому судье</a>
+                            <a class="header__submenu-link" href="/deyatelnost/doska-pocheta">Доска почета</a>
+                            <a class="header__submenu-link" href="/deyatelnost/obshchestvennyy-sovet">Общественный совет</a>
+                            <a class="header__submenu-link" href="/deyatelnost/v-pomoshch-sudebnym-uchastkam">В помощь судебным участкам</a>
+                            <a class="header__submenu-link" href="/deyatelnost/ekspozitsiya-iz-istorii-mirovoy-yustitsii-permskogo-kraya">Экспозиция &quot;Из истории мировой юстиции Пермского края&quot;</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 header__submenu-elem">
+                        <div class="header__submenu-btn">
+                            <a class="header__submenu-title" href="/dokumenty/">Документы</a>
+                        </div>
+                        <div class="header__submenu-links">
+                            <a class="header__submenu-link" href="/dokumenty/normativnye-pravovye-akty/">Нормативные правовые акты</a>
+                            <a class="header__submenu-link" href="/dokumenty/proekty-pravovykh-aktov/">Проекты правовых актов</a>
+                            <a class="header__submenu-link" href="/dokumenty/pravovoy-monitoring/">Правовой мониторинг</a>
+                            <a class="header__submenu-link" href="/dokumenty/informatsiya-o-besplatnoy-yuridicheskoy-pomoshchi/">Информация о бесплатной юридической помощи</a>
+                            <a class="header__submenu-link" href="/dokumenty/poryadok-obzhalovaniya-normativnykh-pravovykh-aktov/">Порядок обжалования нормативных правовых актов</a>
+                            <a class="header__submenu-link" href="/dokumenty/informatsiya-o-zakupkakh/">Информация о закупках</a>
+                            <a class="header__submenu-link" href="/dokumenty/administrativnye-reglamenty/">Административные регламенты</a>
+                            <a class="header__submenu-link" href="/dokumenty/formy-dokumentov/">Формы документов</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 header__submenu-elem">
+                        <div class="header__submenu-btn">
+                            <a class="header__submenu-title" href="/struktura-ogv">Структура </a>
+                        </div>
+                        <div class="header__submenu-links">
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 header__submenu-elem">
+                        <div class="header__submenu-btn">
+                            <a class="header__submenu-title" href="/novosti">Новости</a>
+                        </div>
+                        <div class="header__submenu-links">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header__panel-submenu" data-simplebar>
+    <div class="container">
+        <div class="row header__nav-submenu">
+            <div class="col-12 header__submenu-items">
+                <div class="header__submenu-item">
+                    <div class="header__submenu-btn">
+                        <span class="header__submenu-title" href="#">Министерства</span>
+                    </div>
+                    <a href="https://mgkhb.permkrai.ru" class="header__submenu-link" target="_blank">Министерство жилищно-коммунального хозяйства и благоустройства Пермского края</a>
+                    <a href="https://minzdrav.permkrai.ru" class="header__submenu-link" target="_blank">Министерство здравоохранения Пермского края</a>
+                    <a href="https://mirs.permkrai.ru" class="header__submenu-link" target="_blank">Министерство информационного развития и связи Пермского края</a>
+                    <a href="https://mk.permkrai.ru" class="header__submenu-link" target="_blank">Министерство культуры Пермского края</a>
+                    <a href="https://minobr.permkrai.ru" class="header__submenu-link" target="_blank">Министерство образования и науки Пермского края</a>
+                    <a href="https://minkpo.permkrai.ru" class="header__submenu-link" target="_blank">Министерство по делам Коми-Пермяцкого округа Пермского края</a>
+                    <a href="https://mrks.permkrai.ru" class="header__submenu-link" target="_blank">Министерство по регулированию контрактной системы в сфере закупок Пермского края</a>
+                    <a href="https://migd.permkrai.ru" class="header__submenu-link" target="_blank">Министерство по управлению имуществом и градостроительной деятельности Пермского края</a>
+                    <a href="https://priroda.permkrai.ru" class="header__submenu-link" target="_blank">Министерство природных ресурсов, лесного хозяйства и экологии Пермского края</a>
+                    <a href="https://minpromtorg.permkrai.ru" class="header__submenu-link" target="_blank">Министерство промышленности и торговли Пермского края</a>
+                    <a href="https://agro.permkrai.ru" class="header__submenu-link" target="_blank">Министерство агропромышленного комплекса Пермского края</a>
+                    <a href="https://minsoc.permkrai.ru" class="header__submenu-link" target="_blank">Министерство социального развития Пермского края</a>
+                    <a href="https://msgkh.permkrai.ru" class="header__submenu-link" target="_blank">Министерство строительства Пермского края</a>
+                    <a href="https://mtre.permkrai.ru" class="header__submenu-link" target="_blank">Министерство тарифного регулирования и энергетики Пермского края</a>
+                    <a href="https://minter.permkrai.ru" class="header__submenu-link" target="_blank">Министерство территориального развития Пермского края</a>
+                    <a href="https://mtb.permkrai.ru/" class="header__submenu-link" target="_blank">Министерство территориальной безопасности Пермского края</a>
+                    <a href="https://mintrans.permkrai.ru" class="header__submenu-link" target="_blank">Министерство транспорта Пермского края</a>
+                    <a href="https://sport.permkrai.ru" class="header__submenu-link" target="_blank">Министерство физической культуры и спорта Пермского края</a>
+                    <a href="https://mfin.permkrai.ru" class="header__submenu-link" target="_blank">Министерство финансов Пермского края</a>
+                    <a href="https://economy.permkrai.ru" class="header__submenu-link" target="_blank">Министерство экономического развития и инвестиций Пермского края</a>
+                    <a href="https://mtm.permkrai.ru" class="header__submenu-link" target="_blank">Министерство по туризму Пермского края</a>
+                </div>
+                <div class="header__submenu-item">
+                    <div class="header__submenu-btn">
+                        <span class="header__submenu-title" href="#">Агентства</span>
+                    </div>
+                    <a href="https://apdm.permkrai.ru/" class="header__submenu-link" target="_blank">Агентство по делам молодёжи Пермского края</a>
+                    <a href="https://agarh.permkrai.ru" class="header__submenu-link" target="_blank">Агентство по делам архивов Пермского края</a>
+                    <a href="https://mirust.permkrai.ru" class="header__submenu-link" target="_blank">Агентство по делам юстиции и мировых судей Пермского края</a>
+                    <a href="https://amsp.permkrai.ru" class="header__submenu-link" target="_blank">Агентство по развитию малого и среднего предпринимательства Пермского края</a>
+                </div>
+                <div class="header__submenu-item">
+                    <div class="header__submenu-btn">
+                        <span class="header__submenu-title" href="#">Инспекции</span>
+                    </div>
+                    <a href="https://invet.permkrai.ru" class="header__submenu-link" target="_blank">Государственная ветеринарная инспекция Пермского края</a>
+                    <a href="https://nasledie.permkrai.ru/" class="header__submenu-link" target="_blank">Государственная инспекция по охране объектов культурного наследия Пермского края</a>
+                    <a href="https://giep.permkrai.ru" class="header__submenu-link" target="_blank">Государственная инспекция по экологии и природопользованию Пермского края</a>
+                    <a href="https://iggn.permkrai.ru" class="header__submenu-link" target="_blank">Инспекция государственного жилищного надзора Пермского края</a>
+                    <a href="https://igsn.permkrai.ru/" class="header__submenu-link" target="_blank">Инспекция государственного строительного надзора Пермского края</a>
+                    <a href="https://igtn.permkrai.ru" class="header__submenu-link" target="_blank">Инспекция государственного технического надзора Пермского края</a>
+                </div>
+                <div class="header__submenu-item">
+                    <div class="header__submenu-btn">
+                        <span class="header__submenu-title" href="#">Комитеты</span>
+                    </div>
+                    <a href="https://zags.permkrai.ru" class="header__submenu-link" target="_blank">Комитет записи актов гражданского состояния Пермского края</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

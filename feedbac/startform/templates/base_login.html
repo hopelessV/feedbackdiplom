@@ -1,0 +1,77 @@
+<style>
+  #id_username{
+      position: relative;
+      width: 40%;
+      height: 50px;
+      margin-bottom: 30px;
+      padding-left: 15px;
+      color: #000000;
+      border: 1px solid #eff1f6;
+      border-radius: 5px;
+      margin-left: 400; }
+
+  #id_password{
+      position: relative;
+      width: 40%;
+      height: 50px;
+      margin-bottom: 30px;
+      padding-left: 15px;
+      color: #000000;
+      border: 1px solid #eff1f6;
+      border-radius: 5px; 
+      margin-left: 400; }
+</style>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Stail.css' %}">
+    <title>
+        {% block title %}
+            Агентство по делам юстиции и мировых судей
+        {% endblock %}
+    </title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__panel">
+      <div class="container">
+          <div class="row header__panel-block">
+              <div class="col-auto header__panel-sites">
+                  <div class="header__panel-link header__panel-icon header__panel-icon--sites">
+                    <p style="color: #fff">Авторизация</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </header> 
+  <div class="card-body"> 
+    <form method="post"
+    {% if action_url %}
+    action="{% url action_url %}"
+          {% endif %}
+        >
+        {% csrf_token %}
+    
+        {% for field in form %}
+          <div>
+            <div class="support-ticket-label control-label app-title" style="margin-left: 600;">
+              {{ field.label }}
+            </div>
+            <div style="margin-left: 200;">
+              {{ field }}
+            </div>
+          </div>
+        {% endfor %}
+        <div style="margin-left: -150;">
+          <button class="support-ticket__submit" type="submit">
+            Войти
+          </button>
+        </div>
+        </form>
+    </div>
+</body>
