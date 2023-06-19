@@ -84,19 +84,13 @@
 		    	<td>{{ obj.fields.name }}</td>		    	
 		    	<td>{{ obj.fields.surrname }}</td>
 		    	<td>{{ obj.fields.criminal_record }}</td>
-                {% comment %} <th>
-                    {% if obj.response_status != NULL%}
-                        {{obj.response_status}}
-                    {% else %}
-                        {{obj.response_status == NULL}}
-                    {% endif %}
-                </th> {% endcomment %}
 		    	<td><a href="{% url 'appeal:feedback_detail' obj.pk %}">Детали</a></td>
+                <td>{{ obj.fields.response_status }}</td>
 		    </tr>
             {% endfor %}
         </tbody>
     </table>
-    <footer class="footer">
-        {% include 'includes/footer.html' %}
+    <footer class="footer" style="display: flex; justify-content: end;">
+        {% include 'includes/footer_user.html' %}
     </footer>
 </body>

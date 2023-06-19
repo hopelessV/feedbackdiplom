@@ -9,14 +9,7 @@
             <div class="col-auto header__logo-mobile">
                 </a>
             </div>
-            <div class="col-auto header__panel-links">
-                <form class="header__form header__panel-link" action="/search/">
-                    <input class="header__form-input" placeholder="Поиск по сайту" name="q">
-                    <button class="header__form-btn header__panel-link header__panel-icon header__panel-icon--search" type="submit"></button>
-                </form>
-                <a class="header__panel-link header__panel-icon header__panel-icon--internet" href="https://reception.permkrai.ru/" target="_blank">Интернет-приемная</a>
-                <a class="header__panel-link header__panel-icon header__panel-icon--user" href="{% url 'appeal:profile' user.username %}">Профиль: {{ user.username }}</a>
-            </div>
+            {% include 'includes/profile_place_user.html' %} 
             <div class="col-auto header__menu-burger-mobile">
                 <div class="header__menu-elem header__menu-burger"></div>
             </div>

@@ -39,7 +39,8 @@
                                         {{ field }}
                                     </div>
                                 {% endfor %}
-                                <button class="support-ticket__submit" type="submit">Отправить</button>
+                                <u><a href="{% url 'appeal:consent' %}">Нажимая на кнопку “Отправить”, вы соглашаетесь с Политикой обработки персональных данных</a></u>
+                                <button class="support-ticket__submit" type="submit" style="margin-bottom: 30px;">Отправить</button>
                             </div>
                         </form>
                     </div>
