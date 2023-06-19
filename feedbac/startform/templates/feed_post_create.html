@@ -18,6 +18,26 @@
         color: #000000;
         border: 1px solid #eff1f6;
         border-radius: 5px; }
+
+    #id_vacation{
+        position: relative;
+        width: 80%;
+        height: 50px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        color: #000000;
+        border: 1px solid #eff1f6;
+        border-radius: 5px; }
+    
+    #id_emails{
+        position: relative;
+        width: 80%;
+        height: 50px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        color: #000000;
+        border: 1px solid #eff1f6;
+        border-radius: 5px; }
 </style>
 {% load static %}
 <!DOCTYPE html>
@@ -38,6 +58,9 @@
         {% include 'includes/header.html' %}     
     </header>
     <div class="col-12">
+        <h2 style="margin-left: 315px;" class="app-title support__title">Новое обращение</h2>
+    </div>
+    <div class="col-12">
         <div class=" support-ticket-push__form">
             <div class="support-ticket-group">
                 <form action="{% url 'formstart:post_create' %}" method="post" >
@@ -51,6 +74,7 @@
                                 {{ field }}
                             </div>
                         {% endfor %}
+                        <u><a style="margin-left: 300px;" href="{% url 'appeal:consent' %}">Нажимая на кнопку “Отправить”, вы соглашаетесь с Политикой обработки персональных данных</a></u>
                         <button class="support-ticket__submit" type="submit" style="margin-bottom: 30px;">Отправить</button>
                     </div>
                 </form>

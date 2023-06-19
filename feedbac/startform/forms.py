@@ -28,13 +28,17 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('question','text')
+        fields = ('vacation', 'question', 'emails', 'text')
         labels = {
+            'vacation': ('Должность'),
             'question': ('Тема вопроса'),
+            'emails': ('Почта для связи с вами'),
             'text': ('Текст вопроса')
         }
         help_texts = {
+            'vacation': ('Выберите должность по которой хотите задать вопрос'),
             'question': ('Выберите тему вопроса'),
+            'emails': ('Укажите почту для связи с вами'),
             'text': ('Введите текст вопроса')
         }
 
