@@ -29,6 +29,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     emails = models.EmailField()
     response_status = models.TextField()
+    response_text = models.TextField()
 
     class Meta:
         verbose_name = 'Post'

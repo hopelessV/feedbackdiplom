@@ -68,18 +68,6 @@ def new_appeal(request):
     )
     return render(request, template, context)
 
-# def coment_feedback_detail(request, feedback_id):
-#     template = 'feedback_post.html'
-#     detail = get_object_or_404(Post, pk=feedback_id)
-#     form = ComentResponseForm(request.POST or None)
-#     context = {
-#         'detail': detail,
-#         'form': form,
-#     }
-#     if form.is_valid():
-#         form.save()
-#     return render(request, template, context)
-
 def all_posts(request):
     template = 'feedback_post.html'
     posts = Post.objects.all()

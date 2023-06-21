@@ -64,9 +64,13 @@
     <header class="header">
         {% include 'includes/header.html' %}     
     </header>
+    <div class="col-12">
+        <h2 class="app-title support__title">Список вопросов по вакансиям</h2>
+    </div>
     <table class="table">
         <thead>
             <tr>
+                <th>Должность</th>
                 <th>Тема вопроса</th>
 			    <th>Текст вопроса</th>
                 <th>Статус ответа</th>
@@ -76,6 +80,7 @@
         <tbody>
             {% for obj in page_obj %}
 		    <tr>
+                <td>{{obj.fields.vacation}}</td>
                 <td>{{obj.fields.question}}</td>
 		    	<td>{{obj.fields.text}}</td>
                 <td>{{obj.fields.response_status}}</td>
